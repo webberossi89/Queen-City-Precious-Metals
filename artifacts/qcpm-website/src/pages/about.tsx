@@ -4,6 +4,7 @@ import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { useEffect } from "react";
 import { ShieldCheck, MapPin, Gem, UserCheck, Clock } from "lucide-react";
+import { GoldDivider } from "@/components/ui/GoldDivider";
 
 export default function AboutPage() {
   useEffect(() => {
@@ -20,8 +21,9 @@ export default function AboutPage() {
 
       <SectionWrapper navy>
         <div className="max-w-3xl mx-auto space-y-16">
-          <div>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">Our Story</h2>
+          <div className="flex flex-col items-start">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Our Story</h2>
+            <GoldDivider align="left" className="mb-6" />
             <p className="text-white/70 text-lg leading-relaxed mb-6">
               Queen City Precious Metals was established to provide an alternative to the typical pawn shop or high-pressure jewelry store experience. We recognized that individuals looking to sell luxury watches, gold jewelry, and fine coin collections needed a more professional, private, and transparent way to transact.
             </p>
@@ -50,8 +52,9 @@ export default function AboutPage() {
       </SectionWrapper>
 
       <SectionWrapper dark>
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">Our Expertise</h2>
+        <div className="max-w-4xl mx-auto text-center mb-16 flex flex-col items-center">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Our Expertise</h2>
+          <GoldDivider className="mb-6" />
           <p className="text-white/70 text-lg leading-relaxed">
             We don't buy everything—we focus specifically on high-value categories where our expertise allows us to make the most accurate and competitive offers.
           </p>

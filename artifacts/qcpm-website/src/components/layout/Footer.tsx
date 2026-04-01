@@ -1,31 +1,35 @@
 import { Link } from "wouter";
 import { navLinks, businessInfo } from "@/data/navigation";
+import { ShieldCheck, ArrowRight } from "lucide-react";
+import { GoldDivider } from "@/components/ui/GoldDivider";
 
 export function Footer() {
   return (
-    <footer className="bg-navy-dark pt-20 pb-10 border-t border-white/5">
-      <div className="container mx-auto px-4 md:px-6">
+    <footer className="bg-navy-dark border-t border-gold/20 relative overflow-hidden">
+      {/* subtle background pattern */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 50% 100%, #C9A44A 0%, transparent 70%)', backgroundSize: '100% 100%' }}></div>
+      <div className="absolute inset-0 pointer-events-none bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-20 mix-blend-overlay"></div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10 pt-24 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
-          <div className="col-span-1 lg:col-span-1">
-            <Link href="/" className="inline-block mb-6">
+          <div className="col-span-1 lg:col-span-1 flex flex-col items-start">
+            <Link href="/" className="inline-block mb-8 group">
               <div className="flex flex-col">
-                <span className="font-serif text-2xl font-bold tracking-wide text-white leading-none">
+                <span className="font-serif text-3xl font-bold tracking-wide text-white leading-none group-hover:text-gold transition-colors duration-500">
                   QUEEN CITY
                 </span>
-                <span className="font-sans text-xs tracking-[0.2em] text-gold uppercase mt-1">
-                  Precious Metals
+                <span className="font-sans text-xs tracking-[0.2em] text-gold uppercase mt-2 flex items-center gap-2">
+                  <span className="w-4 h-[1px] bg-gold"></span> Precious Metals <span className="w-4 h-[1px] bg-gold"></span>
                 </span>
               </div>
             </Link>
-            <p className="text-white/60 text-sm leading-relaxed mb-6">
+            <p className="text-white/70 text-sm leading-relaxed mb-6 font-light">
               {businessInfo.description}
             </p>
-            <Link
-              href="/events"
-              className="inline-block text-gold hover:text-gold-light font-bold text-sm underline underline-offset-4 decoration-gold/30 hover:decoration-gold transition-colors"
-            >
-              See Upcoming Buying Events →
-            </Link>
+            <div className="flex items-center gap-3 text-gold/80 mb-6 bg-navy/50 px-4 py-2 rounded border border-white/5">
+              <ShieldCheck size={20} className="text-gold" />
+              <span className="text-xs font-bold uppercase tracking-wider">Fully Insured & Licensed</span>
+            </div>
           </div>
 
           <div>

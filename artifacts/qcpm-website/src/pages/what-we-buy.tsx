@@ -6,6 +6,7 @@ import { categories, featuredBrands } from "@/data/categories";
 import { useEffect } from "react";
 import * as Icons from "lucide-react";
 import { Link } from "wouter";
+import { GoldDivider } from "@/components/ui/GoldDivider";
 
 export default function WhatWeBuyPage() {
   useEffect(() => {

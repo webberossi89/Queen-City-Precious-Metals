@@ -6,6 +6,7 @@ import { CtaSection } from "@/components/sections/CtaSection";
 import { CategoryCard } from "@/components/sections/CategoryCard";
 import { EventCard } from "@/components/sections/EventCard";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
+import { GoldDivider } from "@/components/ui/GoldDivider";
 import { categories, featuredBrands } from "@/data/categories";
 import { events } from "@/data/events";
 import { faqGroups } from "@/data/faqs";
@@ -45,8 +46,9 @@ export default function HomePage() {
       </div>
 
       <SectionWrapper navy>
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">What We Buy</h2>
+        <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col items-center">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">What We Buy</h2>
+          <GoldDivider className="mb-6" />
           <p className="text-white/70 text-lg">
             We focus on precious metals, coins, bullion, jewelry, and premium watches.
           </p>
@@ -66,9 +68,10 @@ export default function HomePage() {
       <SectionWrapper dark>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
               Looking to Sell a Rolex, Cartier, Breitling, or Gold Jewelry?
             </h2>
+            <GoldDivider align="left" className="mb-6" />
             <p className="text-white/70 text-lg leading-relaxed mb-8">
               Some of the most common items we buy include luxury watches, gold chains, bullion, collectible coins, and estate jewelry. If it has precious metal value or recognized luxury brand value, it may qualify.
             </p>
@@ -89,8 +92,9 @@ export default function HomePage() {
       </SectionWrapper>
 
       <SectionWrapper navy className="border-y border-white/5">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col items-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">How It Works</h2>
+          <GoldDivider className="mb-4" />
           <p className="text-gold text-lg font-medium">Simple, clear, and designed to make selling easy.</p>
         </div>
         
@@ -147,6 +151,7 @@ export default function HomePage() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Upcoming Events</h2>
+            <GoldDivider align="left" className="mb-6" />
             <p className="text-white/70">
               Meet the Queen City Precious Metals team at one of our upcoming buying events. Bring your items in person for a professional evaluation.
             </p>
@@ -167,10 +172,11 @@ export default function HomePage() {
       </SectionWrapper>
 
       <SectionWrapper navy>
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col items-center">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
             A More Professional Selling Experience
           </h2>
+          <GoldDivider className="mb-8" />
           <p className="text-white/70 text-lg leading-relaxed mb-16">
             When people sell gold, jewelry, coins, or luxury watches, they want clarity and confidence. Queen City Precious Metals is built around a straightforward process, category expertise, and local event access that makes it easier to sell valuable items.
           </p>
@@ -192,8 +198,9 @@ export default function HomePage() {
       </SectionWrapper>
 
       <SectionWrapper dark>
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-12 flex flex-col items-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+          <GoldDivider className="mb-6" />
           <p className="text-white/70">Common questions about selling to Queen City Precious Metals.</p>
         </div>
         <FaqAccordion groups={[faqGroups[0], faqGroups[2]]} />

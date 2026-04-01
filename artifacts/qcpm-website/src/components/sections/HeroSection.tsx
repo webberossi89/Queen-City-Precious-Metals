@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import { GoldDivider } from "@/components/ui/GoldDivider";
 
 interface HeroSectionProps {
   eyebrow?: string;
@@ -24,6 +25,8 @@ export function HeroSection({
   imageAlt = "Hero image",
   centered = false,
 }: HeroSectionProps) {
+  const isInternal = centered && !imageSrc;
+
   const contentNode = (
     <div className={`flex flex-col ${centered ? "items-center text-center mx-auto max-w-4xl" : ""}`}>
       {eyebrow && (
@@ -31,17 +34,20 @@ export function HeroSection({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-gold uppercase tracking-[0.2em] text-xs md:text-sm font-bold mb-5 block"
+          className="text-gold uppercase tracking-[0.2em] text-xs md:text-sm font-bold mb-4 block"
         >
           {eyebrow}
         </motion.span>
       )}
 
+      {isInternal && eyebrow && <GoldDivider className="mb-6" animated={false} />}
+      {isInternal && !eyebrow && <GoldDivider className="mb-6 my-2" animated={false} />}
+
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+        className={`font-serif ${isInternal ? 'text-4xl md:text-5xl lg:text-6xl' : 'text-5xl md:text-6xl lg:text-7xl'} font-bold text-white mb-6 leading-tight`}
       >
         {headline}
       </motion.h1>
@@ -105,7 +111,7 @@ export function HeroSection({
   );
 
   return (
-    <section className="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden bg-navy-dark">
+    <section className={`relative overflow-hidden bg-navy-dark ${isInternal ? 'pt-24 pb-16 md:pt-32 md:pb-20' : 'pt-12 pb-24 md:pt-20 md:pb-32'}`}>
       {/* Ambient glow */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gold/5 blur-[150px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-blue-500/5 blur-[120px] pointer-events-none" />

@@ -5,6 +5,7 @@ import { CtaSection } from "@/components/sections/CtaSection";
 import { EventCard } from "@/components/sections/EventCard";
 import { events } from "@/data/events";
 import { useEffect, useState } from "react";
+import { GoldDivider } from "@/components/ui/GoldDivider";
 
 export default function EventsPage() {
   useEffect(() => {
@@ -25,8 +26,11 @@ export default function EventsPage() {
       />
 
       <SectionWrapper navy className="py-12 md:py-20">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
-          <h2 className="font-serif text-3xl font-bold text-white">Event Schedule</h2>
+        <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-6 border-b border-white/5 pb-8">
+          <div className="flex flex-col items-start">
+            <h2 className="font-serif text-3xl font-bold text-white mb-3">Event Schedule</h2>
+            <GoldDivider align="left" animated={false} />
+          </div>
           <div className="flex flex-col sm:flex-row items-center gap-3">
             <span className="text-white/60 text-sm font-medium">Filter by City:</span>
             <div className="flex flex-wrap justify-center gap-2">

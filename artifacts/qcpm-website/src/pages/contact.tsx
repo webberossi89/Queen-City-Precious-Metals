@@ -9,6 +9,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
 import { useLocation } from "wouter";
+import { GoldDivider } from "@/components/ui/GoldDivider";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -58,8 +59,9 @@ export default function ContactPage() {
 
       <SectionWrapper navy className="py-12 md:py-20">
         <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
-          <div>
-            <h2 className="font-serif text-3xl font-bold text-white mb-6">Get in Touch</h2>
+          <div className="flex flex-col items-start">
+            <h2 className="font-serif text-3xl font-bold text-white mb-4">Get in Touch</h2>
+            <GoldDivider align="left" className="mb-6" />
             <p className="text-white/70 mb-12 text-lg">
               We're here to help. Whether you have a question about a specific item, need details about an upcoming event, or just want to learn more about our process, our team is ready to assist you.
             </p>

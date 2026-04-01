@@ -5,6 +5,7 @@ import { CtaSection } from "@/components/sections/CtaSection";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { faqGroups } from "@/data/faqs";
 import { useEffect } from "react";
+import { GoldDivider } from "@/components/ui/GoldDivider";
 
 export default function FaqPage() {
   useEffect(() => {
@@ -20,7 +21,8 @@ export default function FaqPage() {
       />
 
       <SectionWrapper navy className="py-12 md:py-20">
-        <div className="max-w-4xl mx-auto bg-navy-dark p-6 md:p-12 rounded-xl border border-white/5 shadow-2xl">
+        <div className="max-w-4xl mx-auto bg-navy-dark p-6 md:p-12 rounded-xl border border-white/5 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
           <FaqAccordion groups={faqGroups} />
         </div>
       </SectionWrapper>
