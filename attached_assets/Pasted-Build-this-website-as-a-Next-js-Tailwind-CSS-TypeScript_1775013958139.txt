@@ -1,0 +1,617 @@
+Build this website as a **Next.js + Tailwind CSS + TypeScript** project.
+
+Use the existing brand colors already defined in the project. Do not create a new color palette.
+
+Create a premium, responsive, SEO-friendly multi-page marketing website for **Queen City Precious Metals** with a polished, modern feel. The site should feel refined, trustworthy, local, high-value, and conversion-focused. Visually, it should feel closer to modern premium websites like Linear, Vercel, Notion, and Superhuman, adapted for a precious metals and luxury watch buyer.
+
+Use:
+
+* **Next.js App Router**
+* **TypeScript**
+* **Tailwind CSS**
+* **Framer Motion** for subtle animations
+* clean reusable components
+* structured content/data files for events, FAQs, and buying categories
+
+The website should include these pages:
+
+* `/` Home
+* `/what-we-buy`
+* `/events`
+* `/about`
+* `/faq`
+* `/contact`
+
+Business details:
+Queen City Precious Metals buys:
+
+* gold jewelry
+* silver jewelry / scrap precious metals
+* coins and coin collections
+* gold and silver bars / bullion
+* estate jewelry
+* luxury watches
+* designer watches
+* select Apple Watches
+
+Important exclusions:
+
+* do not mention antiques
+* do not mention playing cards
+* do not include those categories anywhere except one clarification on the homepage FAQ or qualification note saying they do not buy them
+
+Priority items and brands to highlight visually and in copy:
+
+* Rolex
+* Cartier
+* Breitling
+* Apple Watches
+* gold chains
+* gold necklaces
+* coins
+* bars / bullion
+
+Main website goals:
+
+1. clearly show what the company buys
+2. build trust and professionalism
+3. prominently feature upcoming events
+4. drive users to either attend an event or contact the business about an item
+
+Primary CTAs:
+
+* View Upcoming Events
+* See What We Buy
+* Contact Us
+* Ask About Your Item
+
+Use a strong reusable site structure:
+
+* sticky header
+* premium footer
+* reusable hero sections
+* reusable CTA sections
+* reusable event card component
+* reusable category card component
+* reusable FAQ accordion component
+* reusable section wrapper / content container components
+
+Project structure should be clean and organized, for example:
+
+* `app/`
+* `components/`
+* `components/layout/`
+* `components/sections/`
+* `components/ui/`
+* `data/`
+* `lib/`
+* `public/`
+
+Create structured data files such as:
+
+* `data/events.ts`
+* `data/faqs.ts`
+* `data/categories.ts`
+* `data/navigation.ts`
+
+Use tasteful placeholder images or gradient/image panels where needed. If actual photography is not available, build elegant visual blocks that suggest:
+
+* gold necklaces
+* gold bars
+* coins
+* luxury watches
+* Apple Watches
+* Charlotte skyline
+  without looking cheesy or cluttered.
+
+## Global design direction
+
+The design should be:
+
+* premium
+* modern
+* elegant
+* local
+* trustworthy
+* clean
+* conversion-oriented
+
+Use the existing brand colors from the project. Build the styling system around them with:
+
+* strong typography hierarchy
+* generous spacing
+* rounded cards
+* subtle borders
+* soft shadows
+* premium hover states
+* accessible contrast
+* mobile-first responsiveness
+
+Include tasteful visual motifs such as:
+
+* subtle Charlotte skyline line art
+* watch-inspired circular accents
+* metallic/gold glow highlights
+* soft grid textures
+* coin-edge style circular detailing
+* blurred gradient shapes behind key content
+
+Do not make the site feel like a pawn shop, flea market, or cluttered “roadshow” site.
+
+## Motion direction
+
+Use Framer Motion for subtle animations only:
+
+* fade-up reveals
+* staggered card reveals
+* slight hover lift
+* soft CTA hover transitions
+* restrained shimmer or glow
+* very minimal parallax only if tasteful
+
+Avoid:
+
+* bounce animations
+* flashy transitions
+* loud effects
+* aggressive parallax
+* anything gimmicky
+
+## Build the following pages and sections
+
+### 1. Home page `/`
+
+Build the homepage with these sections in this order:
+
+#### Header
+
+* logo / wordmark placeholder for Queen City Precious Metals
+* navigation links: Home, What We Buy, Events, About, FAQ, Contact
+* primary CTA button: Upcoming Events
+* optional secondary CTA: Call Now
+* sticky on scroll
+* mobile menu included
+
+#### Hero
+
+Two-column layout on desktop.
+
+Left side copy:
+Eyebrow:
+**Charlotte’s Trusted Precious Metals & Luxury Watch Buyer**
+
+Headline:
+**Turn Gold, Coins, Bullion, and Luxury Watches Into Cash**
+
+Subheadline:
+**Queen City Precious Metals buys gold jewelry, coins, bars, bullion, Rolex, Cartier, Breitling, and other high-value pieces with straightforward evaluations and upcoming buying events.**
+
+Supporting text:
+**Whether you’re selling a single chain, a collection of coins, or a luxury watch, our team makes the process simple, transparent, and professional.**
+
+Buttons:
+
+* View Upcoming Events
+* See What We Buy
+
+Trust bullets:
+
+* Free evaluations
+* No pressure to sell
+* Luxury watch expertise
+* Event-based buying across the region
+
+Right side visual:
+Create a premium layered hero composition that implies:
+
+* gold necklaces instead of pearls
+* gold bars
+* coins
+* Rolex / Cartier / Breitling style watch imagery
+* older Apple Watch imagery
+* subtle Charlotte skyline in background
+* reflective metallic or water-like lower composition with coins/jewelry/watch-inspired elements integrated into it
+
+Make it elegant and high-end, not busy.
+
+Also add a curved or softened transition from hero into the next section.
+
+#### What We Buy Snapshot
+
+Section headline:
+**What We Buy**
+
+Intro:
+**We focus on precious metals, coins, bullion, jewelry, and premium watches.**
+
+Create a responsive grid of cards for:
+
+* Gold Jewelry
+* Silver Jewelry & Scrap
+* Coins & Coin Collections
+* Gold & Silver Bars / Bullion
+* Luxury Watches
+* Designer Watches
+* Estate Jewelry
+* Select Smart Watches
+
+Use these descriptions:
+
+Gold Jewelry:
+Chains, necklaces, bracelets, rings, earrings, charms, broken gold, and estate pieces.
+
+Silver Jewelry & Scrap:
+Silver pieces, scrap silver, and items with precious metal value.
+
+Coins & Collections:
+Gold coins, silver coins, U.S. coins, foreign coins, and curated collections.
+
+Bullion & Bars:
+Gold bars, silver bars, rounds, and investment-grade bullion.
+
+Luxury Watches:
+Rolex, Cartier, Breitling, and other premium brands.
+
+Designer Watches:
+Recognized watches with resale or collector value.
+
+Estate Jewelry:
+Vintage and modern jewelry with precious metal value.
+
+Select Smart Watches:
+Select Apple Watches and other higher-value wearable tech.
+
+Below the grid add a small qualification note:
+**We do not buy playing cards or general antiques.**
+
+#### Featured Brands & Items
+
+Headline:
+**Looking to Sell a Rolex, Cartier, Breitling, or Gold Jewelry?**
+
+Body:
+**Some of the most common items we buy include luxury watches, gold chains, bullion, collectible coins, and estate jewelry. If it has precious metal value or recognized luxury brand value, it may qualify.**
+
+Add visual badges or cards for:
+
+* Rolex watches
+* Cartier watches
+* Breitling watches
+* Apple Watches
+* Gold chains & necklaces
+* Gold & silver coins
+* Bars & bullion
+* Estate jewelry
+
+CTA:
+**Ask About Your Item**
+
+#### How It Works
+
+Headline:
+**How It Works**
+
+Subheadline:
+**Simple, clear, and designed to make selling easy.**
+
+3 steps:
+
+1. **Find an Event**
+   Browse our upcoming events and choose the location that works best for you.
+
+2. **Bring Your Items In**
+   Bring your gold, coins, bullion, jewelry, or luxury watch for an in-person evaluation.
+
+3. **Review Your Offer**
+   Our team evaluates your items and presents a straightforward offer with no pressure.
+
+Support line:
+**No confusion. No unnecessary delays. Just a professional process from start to finish.**
+
+#### Upcoming Events
+
+This section is very important and should be easy to update later.
+
+Headline:
+**Upcoming Events**
+
+Intro:
+**Meet the Queen City Precious Metals team at one of our upcoming buying events. Bring your items in person for a professional evaluation.**
+
+Create:
+
+* one featured event card
+* then a responsive grid of event cards
+* reusable event card component
+* data-driven rendering from `data/events.ts`
+
+Each event supports:
+
+* title
+* city
+* venue
+* address
+* start date
+* end date
+* hours
+* short description
+* accepted categories
+* CTA button “View Event Details”
+
+Use placeholder events:
+
+1. Charlotte, NC — Queen City Buying Event — Friday–Saturday | 10 AM–5 PM
+   Bring gold jewelry, coins, bullion, and luxury watches.
+
+2. Concord, NC — Precious Metals Buying Event — Thursday | 11 AM–6 PM
+   Rolex, Cartier, Breitling, coins, bars, and estate jewelry welcome.
+
+3. Gastonia, NC — Regional Buying Event — Saturday | 9 AM–4 PM
+   Walk in with your items and receive an expert evaluation.
+
+CTA:
+**View All Events**
+
+#### Why Choose Queen City Precious Metals
+
+Headline:
+**Why Sellers Choose Queen City Precious Metals**
+
+Create 4 premium icon cards:
+
+1. Focused Expertise
+   We specialize in precious metals, coins, bullion, and premium watches.
+
+2. Luxury Watch Recognition
+   We understand recognized brands like Rolex, Cartier, and Breitling.
+
+3. Professional Evaluations
+   Clear communication, straightforward offers, and a no-pressure experience.
+
+4. Event Convenience
+   Attend an upcoming event and meet with our team in person.
+
+#### Trust / Proof Section
+
+Headline:
+**A More Professional Selling Experience**
+
+Body:
+**When people sell gold, jewelry, coins, or luxury watches, they want clarity and confidence. Queen City Precious Metals is built around a straightforward process, category expertise, and local event access that makes it easier to sell valuable items.**
+
+Add proof/stat placeholder cards:
+
+* Trusted regional buying events
+* Luxury watch & bullion focus
+* Transparent evaluations
+* No-pressure consultations
+
+Build this so testimonials or review cards can easily replace the placeholders later.
+
+#### FAQ
+
+Use accordion UI.
+
+FAQs:
+
+1. What items do you buy?
+   We buy gold jewelry, silver, coins, bullion, bars, estate jewelry, Rolex, Cartier, Breitling, and other premium watches, along with select Apple Watches and similar items.
+
+2. Do I need an appointment?
+   For most events, you can attend during posted hours. Event details will note whether appointments are recommended.
+
+3. Do you buy antiques or playing cards?
+   No. We focus on precious metals, jewelry, coins, bullion, and watches.
+
+4. What if I’m not sure whether my item qualifies?
+   Contact us or bring it to an event. We’re happy to review whether it fits our buying categories.
+
+5. Do you buy broken or damaged gold jewelry?
+   Yes. Condition can vary depending on the item and its underlying value.
+
+6. Which watch brands are you interested in?
+   We are especially interested in brands like Rolex, Cartier, and Breitling, along with select other luxury and designer watches.
+
+#### Final CTA
+
+Headline:
+**Have Something to Sell?**
+
+Body:
+**Check our upcoming events or reach out to ask about your item before you visit.**
+
+Buttons:
+
+* See Upcoming Events
+* Contact Us
+
+#### Footer
+
+Include:
+
+* logo / wordmark
+* short business description
+* nav links
+* contact info placeholders
+* events link
+* copyright
+
+---
+
+### 2. What We Buy page `/what-we-buy`
+
+Create a dedicated page with:
+
+* hero intro
+* detailed category sections
+* supporting visuals
+* brand highlight strip
+* CTA section
+
+Hero:
+Headline:
+**What We Buy**
+
+Subheadline:
+**Queen City Precious Metals buys precious metals, bullion, coins, estate jewelry, and premium watches.**
+
+Detailed category sections for:
+
+* Gold Jewelry
+* Silver Jewelry & Scrap
+* Coins & Coin Collections
+* Bullion & Bars
+* Luxury Watches
+* Designer Watches
+* Estate Jewelry
+* Select Apple Watches
+
+Each category section should include:
+
+* title
+* short explanation
+* sample items
+* icon or visual panel
+* CTA: **Ask About This Category**
+
+Add a brand/item highlight strip for:
+
+* Rolex
+* Cartier
+* Breitling
+* Apple Watch
+* Gold Chains
+* Bullion
+* Coins
+
+End with CTA section.
+
+---
+
+### 3. Events page `/events`
+
+Create a dedicated Events page.
+
+Sections:
+
+1. Hero
+   Headline:
+   **Upcoming Buying Events**
+
+Subheadline:
+**Find an upcoming Queen City Precious Metals event near you and bring your items for an in-person evaluation.**
+
+2. Event listing grid
+   Use the same reusable event card component and `data/events.ts`
+
+3. Optional simple filter by city or month if easy to implement
+
+4. Event detail card format with richer metadata display
+
+5. Final CTA
+   **Have questions before you attend? Contact us.**
+
+---
+
+### 4. About page `/about`
+
+Build an About page with:
+
+1. Intro hero
+2. Company overview
+3. What makes them different
+4. Focus areas: precious metals, coins, bullion, luxury watches
+5. Event-based service model
+6. CTA section
+
+Suggested headline:
+**A Straightforward, Professional Way to Sell High-Value Items**
+
+Write polished placeholder copy consistent with a premium local buyer brand.
+
+---
+
+### 5. FAQ page `/faq`
+
+Create a dedicated FAQ page with grouped accordion sections:
+
+* What we buy
+* How events work
+* Evaluations and offers
+* Watches and jewelry
+* Contact / appointments
+
+Use structured FAQ data from `data/faqs.ts`.
+
+---
+
+### 6. Contact page `/contact`
+
+Build a premium contact page with:
+
+1. Hero
+2. Contact form
+3. Contact info placeholders
+4. “Ask About Your Item” support copy
+5. Optional map or event inquiry block
+
+Headline:
+**Questions About an Item or Upcoming Event?**
+
+Supporting text:
+**Reach out to Queen City Precious Metals to ask about what we buy, upcoming event details, or whether your item qualifies.**
+
+Include form fields like:
+
+* Name
+* Email
+* Phone
+* Item Type
+* Message
+
+---
+
+## SEO requirements
+
+Add metadata for every page using Next.js metadata support.
+
+Homepage metadata:
+Title:
+**Queen City Precious Metals | We Buy Gold, Coins, Bullion & Luxury Watches**
+
+Description:
+**Sell gold jewelry, coins, bullion, Rolex, Cartier, Breitling, and other luxury watches to Queen City Precious Metals. View upcoming events and get expert evaluations.**
+
+Create sensible metadata for the other pages as well.
+
+---
+
+## Technical requirements
+
+Generate the actual implementation, not just a content outline.
+
+Include:
+
+* reusable UI components
+* page sections
+* data-driven rendering
+* TypeScript types
+* clean folder structure
+* responsive layouts
+* accessible buttons, forms, and accordions
+* polished placeholder content where needed
+
+Use mock content and placeholders where real business contact details are missing.
+
+Make the codebase easy to edit later.
+
+Prioritize:
+
+* premium design
+* clarity
+* trust
+* event-driven conversion
+* category recognition
+* maintainability
+
+When building the UI, use the exact copy above unless a very small readability improvement is needed.
