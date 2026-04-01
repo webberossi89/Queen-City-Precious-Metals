@@ -1,0 +1,17 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - corepack enable
+        - pnpm install --frozen-lockfile
+    build:
+      commands:
+        - cd artifacts/qcpm-website && pnpm run build
+  artifacts:
+    baseDirectory: artifacts/qcpm-website/dist
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*

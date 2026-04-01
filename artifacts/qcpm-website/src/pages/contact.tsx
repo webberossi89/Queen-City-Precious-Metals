@@ -39,14 +39,34 @@ export default function ContactPage() {
   });
 
   const onSubmit = async (data: ContactForm) => {
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log("Form submitted:", data);
-    toast({
-      title: "Message Sent",
-      description: "Thank you for reaching out. We will get back to you shortly.",
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+        subject: `QCPM Contact: ${data.itemType} inquiry from ${data.name}`,
+        from_name: data.name,
+        ...data,
+        botcheck: "",
+      }),
     });
-    reset();
+
+    const result = await response.json();
+
+    if (result.success) {
+      toast({
+        title: "Message Sent",
+        description:
+          "Thank you for reaching out. We will get back to you shortly.",
+      });
+      reset();
+    } else {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or call us directly.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -113,6 +133,9 @@ export default function ContactPage() {
             <h3 className="font-serif text-2xl font-bold text-white mb-6 relative z-10">Send a Message</h3>
             
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 relative z-10">
+              {/* Honeypot field for spam protection */}
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium text-white/90">Full Name</label>
                 <input
