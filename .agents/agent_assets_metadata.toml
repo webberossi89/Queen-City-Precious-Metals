@@ -12,3 +12,15 @@ id = "QDC5aBPQ5J_9BaqBl9jVS"
 uri = "file://artifacts/mockup-sandbox/public/images/hero-modern-qc.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "HDl06zym9gawJXle-o-53"
+uri = "file://artifacts/mockup-sandbox/public/images/hero-carolina-gold.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "zwqcy4h8DQpvtgmRXBOcQ"
+uri = "file://artifacts/mockup-sandbox/public/images/hero-midnight-prestige.png"
+type = "image"
+title = "generated_image"
