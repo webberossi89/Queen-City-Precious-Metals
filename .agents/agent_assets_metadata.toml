@@ -90,3 +90,21 @@ id = "gffXUusfhffH_jzQSTcw8"
 uri = "file://attached_assets/logos/logo_6_seal.png"
 type = "image"
 title = "coin seal logo"
+
+[[generated]]
+id = "nwbyiwnotp3aDMr629PPn"
+uri = "file://attached_assets/logos/logo_final_crown_monogram.png"
+type = "image"
+title = "crown monogram final logo"
+
+[[generated]]
+id = "Ocmb1o8akswALhoIuxEQG"
+uri = "file://attached_assets/logos/logo_final_v2.png"
+type = "image"
+title = "crown QC monogram v2"
+
+[[generated]]
+id = "UhA7JmWUrZtO-Uay739do"
+uri = "file://attached_assets/logos/logo_final_v3.png"
+type = "image"
+title = "QC interlocked monogram crown"
