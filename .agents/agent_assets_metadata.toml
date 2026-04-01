@@ -24,3 +24,33 @@ id = "zwqcy4h8DQpvtgmRXBOcQ"
 uri = "file://artifacts/mockup-sandbox/public/images/hero-midnight-prestige.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "Hy58p-vUjKqXaMziDbWxx"
+uri = "file://artifacts/qcpm-website/public/images/hero.png"
+type = "image"
+title = "Hero image with precious metals"
+
+[[generated]]
+id = "XcZ6pjuANHUnXxVA7itbh"
+uri = "file://artifacts/qcpm-website/public/images/gold-jewelry.png"
+type = "image"
+title = "Gold jewelry on dark background"
+
+[[generated]]
+id = "3HLYPkC77zkiVL8UD93xL"
+uri = "file://artifacts/qcpm-website/public/images/luxury-watches.png"
+type = "image"
+title = "Luxury watch on dark background"
+
+[[generated]]
+id = "iUoxB8G1DgJl46WOnNToj"
+uri = "file://artifacts/qcpm-website/public/images/coins.png"
+type = "image"
+title = "Gold and silver coins"
+
+[[generated]]
+id = "-p5MlZ5i5_RdduPMZcWoX"
+uri = "file://artifacts/qcpm-website/public/images/bullion.png"
+type = "image"
+title = "Gold bars and bullion"
