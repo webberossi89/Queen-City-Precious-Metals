@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "848iM1i-6__7NPXTJJpWW"
@@ -108,3 +107,9 @@ id = "UhA7JmWUrZtO-Uay739do"
 uri = "file://attached_assets/logos/logo_final_v3.png"
 type = "image"
 title = "QC interlocked monogram crown"
+
+[[outputs]]
+id = "1_twsAmWaJjr-1AWCCEBV"
+uri = "file://attached_assets/logos/logo_final_composed.png"
+type = "image"
+title = "Queen City Precious Metals — Final Logo"
