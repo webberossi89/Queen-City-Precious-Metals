@@ -138,7 +138,7 @@ function WhyChooseSection() {
     "Pay with checks",
     "Wait days for payment",
     "Consignment deals",
-    "Uncertainty &amp; delays",
+    "Uncertainty & delays",
     "Low-ball offers",
   ];
   const qcpmItems = [
@@ -170,7 +170,7 @@ function WhyChooseSection() {
               {othersItems.map((item) => (
                 <li key={item} className="royal-comparison-item royal-item-bad">
                   <span className="royal-icon-bad">&#10007;</span>
-                  <span dangerouslySetInnerHTML={{ __html: item }} />
+                  {item}
                 </li>
               ))}
             </ul>
