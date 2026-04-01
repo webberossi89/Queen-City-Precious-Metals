@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ── Root ── */
+.modern-root {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #111111;
+  color: #ffffff;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Navbar ── */
+.modern-navbar {
+  background: rgba(17, 17, 17, 0.98);
+  border-bottom: 2px solid #F0C040;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.modern-navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.modern-logo {
+  width: 280px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.modern-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex: 1;
+  justify-content: center;
+}
+
+.modern-nav-link {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.modern-nav-link:hover {
+  color: #F0C040;
+}
+
+.modern-nav-cta {
+  background: transparent;
+  color: #F0C040;
+  border: 2px solid #F0C040;
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 22px;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.modern-nav-cta:hover {
+  background: #F0C040;
+  color: #111111;
+}
+
+/* ── Hero ── */
+.modern-hero {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  background: url('/__mockup/images/hero-modern-qc.png') center center / cover no-repeat;
+  overflow: hidden;
+}
+
+.modern-skyline-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.modern-skyline-svg {
+  width: 100%;
+  height: 300px;
+}
+
+.modern-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(17, 17, 17, 0.93) 0%,
+    rgba(17, 17, 17, 0.80) 60%,
+    rgba(17, 17, 17, 0.60) 100%
+  );
+  z-index: 2;
+}
+
+.modern-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.modern-hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.modern-eyebrow-line {
+  flex: 0 0 32px;
+  height: 1px;
+  background: #F0C040;
+  opacity: 0.6;
+}
+
+.modern-hero-headline {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  line-height: 1.0;
+  margin: 0 0 24px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+.modern-headline-qc {
+  font-size: 88px;
+  color: #F0C040;
+  display: block;
+}
+
+.modern-headline-pm {
+  font-size: 44px;
+  color: rgba(255,255,255,0.92);
+  letter-spacing: 8px;
+  display: block;
+}
+
+.modern-hero-subheadline {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.80);
+  margin: 0 0 32px;
+  max-width: 580px;
+}
+
+.modern-gold-text {
+  color: #F0C040;
+  font-weight: 600;
+}
+
+.modern-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.modern-hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.75);
+  text-transform: uppercase;
+}
+
+.modern-badge-check {
+  color: #F0C040;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.modern-hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.modern-btn-primary {
+  background: #F0C040;
+  color: #111111;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 40px;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+
+.modern-btn-primary:hover {
+  background: #f8d060;
+  transform: translateY(-2px);
+}
+
+.modern-btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.3);
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 36px;
+  transition: border-color 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modern-btn-secondary:hover {
+  border-color: #F0C040;
+  color: #F0C040;
+}
+
+/* ── Why Choose Section ── */
+.modern-why {
+  background: #1a1a1a;
+  padding: 80px 0;
+}
+
+.modern-why-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.modern-why-headline {
+  font-family: 'Oswald', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px;
+  letter-spacing: 1px;
+}
+
+.modern-why-sub {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.7);
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.modern-why-body {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  max-width: 580px;
+  margin: 0 auto 52px;
+  line-height: 1.9;
+}
+
+.modern-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  max-width: 860px;
+  margin: 0 auto 60px;
+  text-align: left;
+  background: #333;
+}
+
+.modern-comparison-others {
+  background: #222;
+  padding: 40px;
+}
+
+.modern-comparison-qcpm {
+  background: #F0C040;
+  padding: 40px;
+  position: relative;
+}
+
+.modern-qcpm-badge {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #111111;
+  background: #111111;
+  color: #F0C040;
+  padding: 4px 12px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.modern-col-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin: 0 0 20px;
+}
+
+.modern-compare-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modern-compare-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.modern-bad {
+  color: rgba(255,255,255,0.5);
+}
+
+.modern-good {
+  color: #111111;
+  font-weight: 600;
+}
+
+.modern-icon-bad {
+  color: #e05252;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.modern-icon-good {
+  color: #111111;
+  font-weight: 900;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Stats bar */
+.modern-stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: #111;
+  border: 1px solid rgba(240,192,64,0.2);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.modern-stat {
+  flex: 1;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.modern-stat-number {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #F0C040;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.modern-stat-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+.modern-stat-divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(240,192,64,0.2);
+  flex-shrink: 0;
+}

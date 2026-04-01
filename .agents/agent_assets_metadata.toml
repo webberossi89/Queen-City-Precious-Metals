@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "848iM1i-6__7NPXTJJpWW"
+uri = "file://artifacts/mockup-sandbox/public/images/hero-royal-heritage.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "QDC5aBPQ5J_9BaqBl9jVS"
+uri = "file://artifacts/mockup-sandbox/public/images/hero-modern-qc.png"
+type = "image"
+title = "generated_image"
