@@ -27,15 +27,12 @@ export function Header() {
         }`}
       >
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 z-50 relative">
-            <div className="flex flex-col">
-              <span className="font-serif text-xl md:text-2xl font-bold tracking-wide text-white leading-none">
-                QUEEN CITY
-              </span>
-              <span className="font-sans text-[10px] md:text-xs tracking-[0.2em] text-gold uppercase mt-1">
-                Precious Metals
-              </span>
-            </div>
+          <Link href="/" className="flex items-center z-50 relative">
+            <img
+              src="/logo.png"
+              alt="Queen City Precious Metals"
+              className="h-12 md:h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Nav */}

@@ -13,15 +13,12 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-24 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
           <div className="col-span-1 lg:col-span-1 flex flex-col items-start">
-            <Link href="/" className="inline-block mb-8 group">
-              <div className="flex flex-col">
-                <span className="font-serif text-3xl font-bold tracking-wide text-white leading-none group-hover:text-gold transition-colors duration-500">
-                  QUEEN CITY
-                </span>
-                <span className="font-sans text-xs tracking-[0.2em] text-gold uppercase mt-2 flex items-center gap-2">
-                  <span className="w-4 h-[1px] bg-gold"></span> Precious Metals <span className="w-4 h-[1px] bg-gold"></span>
-                </span>
-              </div>
+            <Link href="/" className="inline-block mb-8">
+              <img
+                src="/logo.png"
+                alt="Queen City Precious Metals"
+                className="h-20 w-auto"
+              />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6 font-light">
               {businessInfo.description}
