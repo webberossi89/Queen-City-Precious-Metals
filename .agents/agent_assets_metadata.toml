@@ -54,3 +54,39 @@ id = "-p5MlZ5i5_RdduPMZcWoX"
 uri = "file://artifacts/qcpm-website/public/images/bullion.png"
 type = "image"
 title = "Gold bars and bullion"
+
+[[generated]]
+id = "N1MlgW5sIBtafUKBEEa1Y"
+uri = "file://attached_assets/logos/logo_1_crown.png"
+type = "image"
+title = "crown logo"
+
+[[generated]]
+id = "mmIBDhG3d1shCWd8w9_a5"
+uri = "file://attached_assets/logos/logo_2_monogram.png"
+type = "image"
+title = "monogram badge logo"
+
+[[generated]]
+id = "7ePbMWYBpB8-ma3giFPlV"
+uri = "file://attached_assets/logos/logo_3_diamond.png"
+type = "image"
+title = "diamond geometric logo"
+
+[[generated]]
+id = "KVWbutN5rcKW4WFfmk4om"
+uri = "file://attached_assets/logos/logo_4_shield.png"
+type = "image"
+title = "shield heraldic logo"
+
+[[generated]]
+id = "GZdNUMiagZDfEMVsTtoNK"
+uri = "file://attached_assets/logos/logo_5_bullion.png"
+type = "image"
+title = "bullion bars logo"
+
+[[generated]]
+id = "gffXUusfhffH_jzQSTcw8"
+uri = "file://attached_assets/logos/logo_6_seal.png"
+type = "image"
+title = "coin seal logo"
