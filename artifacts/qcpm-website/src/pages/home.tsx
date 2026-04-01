@@ -22,17 +22,11 @@ export default function HomePage() {
     <MainLayout>
       <HeroSection
         eyebrow="Charlotte's Trusted Precious Metals & Luxury Watch Buyer"
-        headline="Turn Gold, Coins, Bullion, and Luxury Watches Into Cash"
-        subheadline="Queen City Precious Metals buys gold jewelry, coins, bars, bullion, Rolex, Cartier, Breitling, and other high-value pieces with straightforward evaluations and upcoming buying events."
-        body="Whether you're selling a single chain, a collection of coins, or a luxury watch, our team makes the process simple, transparent, and professional."
+        headline="Queen City Precious Metals"
+        subheadline="We pay cash on the spot for gold, silver, coins, bullion, Rolex, Cartier, Breitling, and luxury watches. No waiting. No checks."
         primaryCta={{ label: "View Upcoming Events", href: "/events" }}
         secondaryCta={{ label: "See What We Buy", href: "/what-we-buy" }}
-        bullets={[
-          "Free evaluations",
-          "No pressure to sell",
-          "Luxury watch expertise",
-          "Event-based buying across the region"
-        ]}
+        badges={["Free Evaluations", "Immediate Payment", "No Pressure", "Expert Appraisers"]}
         imageSrc="/images/hero.png"
       />
 
