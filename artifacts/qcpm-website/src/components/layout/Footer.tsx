@@ -99,7 +99,7 @@ export function Footer() {
               </p>
               <p>
                 <strong className="text-white block mb-1">Service Area</strong>
-                {businessInfo.city}, {businessInfo.state} & Surrounding Region
+                Charlotte, NC & surrounding region — we travel to you via scheduled buying events.
               </p>
             </address>
           </div>

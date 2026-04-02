@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { businessInfo } from "@/data/navigation";
 import { useEffect } from "react";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, Calendar } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -113,13 +113,12 @@ export default function ContactPage() {
 
               <div className="flex items-start gap-4 group">
                 <div className="w-12 h-12 bg-navy-dark border border-gold/30 rounded-full flex items-center justify-center text-gold shrink-0 group-hover:bg-gold group-hover:text-navy transition-colors">
-                  <MapPin size={20} />
+                  <Calendar size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white mb-1">Service Area</h4>
+                  <h4 className="font-bold text-white mb-1">Buying Events</h4>
                   <p className="text-white/70 font-medium">
-                    {businessInfo.city}, {businessInfo.state} & Surrounding Region<br/>
-                    <span className="text-sm font-normal opacity-80">(By appointment and scheduled events)</span>
+                    We travel to you — check our <a href="/events" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2">upcoming events</a> for dates and locations across the Charlotte region.
                   </p>
                 </div>
               </div>
