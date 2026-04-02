@@ -12,7 +12,7 @@ export const navLinks: NavLink[] = [
 export const businessInfo = {
   name: "Queen City Precious Metals",
   tagline: "Charlotte's Trusted Precious Metals & Luxury Watch Buyer",
-  phone: "(704) 555-0100",
+  phone: "(866) 721-7869",
   email: "info@queencitypreciousmetals.com",
   city: "Charlotte",
   state: "NC",
