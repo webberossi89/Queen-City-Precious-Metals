@@ -1,20 +1,21 @@
 import { MainLayout } from "@/components/layout/MainLayout";
+import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { categories, featuredBrands } from "@/data/categories";
-import { useEffect } from "react";
 import * as Icons from "lucide-react";
 import { Link } from "wouter";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 
 export default function WhatWeBuyPage() {
-  useEffect(() => {
-    document.title = "What We Buy | Queen City Precious Metals";
-  }, []);
-
   return (
     <MainLayout>
+      <SEO
+        title="What We Buy"
+        description="We buy gold jewelry, silver, coins, bullion, bars, estate jewelry, pocket watches, and luxury watches including Rolex, Cartier, Breitling, Patek Philippe, and more."
+        canonical="/what-we-buy"
+      />
       <HeroSection
         headline="What We Buy"
         subheadline="Queen City Precious Metals buys precious metals, bullion, coins, estate jewelry, and premium watches."

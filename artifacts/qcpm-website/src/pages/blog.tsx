@@ -3,17 +3,19 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 import { blogPosts } from "@/data/blog";
+import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
-import { useEffect } from "react";
 import { Calendar, ArrowRight } from "lucide-react";
 
 export default function BlogPage() {
-  useEffect(() => {
-    document.title = "Blog | Queen City Precious Metals";
-  }, []);
 
   return (
     <MainLayout>
+      <SEO
+        title="Blog"
+        description="Precious metals market updates, selling guides, and news from Queen City Precious Metals. Stay informed about gold prices, coin collecting, and luxury watch trends."
+        canonical="/blog"
+      />
       <HeroSection
         headline="Insights & Updates"
         subheadline="Stay informed with market updates, selling guides, and news from Queen City Precious Metals."

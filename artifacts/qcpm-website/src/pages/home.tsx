@@ -1,5 +1,5 @@
 import { MainLayout } from "@/components/layout/MainLayout";
-import { useEffect } from "react";
+import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { CtaSection } from "@/components/sections/CtaSection";
@@ -15,12 +15,13 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 
 export default function HomePage() {
-  useEffect(() => {
-    document.title = "Queen City Precious Metals | We Buy Gold, Coins, Bullion & Luxury Watches";
-  }, []);
-
   return (
     <MainLayout>
+      <SEO
+        title="We Buy Gold, Coins, Bullion & Luxury Watches"
+        description="Sell gold jewelry, coins, bullion, Rolex, Cartier, Breitling, and luxury watches to Queen City Precious Metals. Professional valuations at scheduled buying events across the Charlotte region."
+        canonical="/"
+      />
       <HeroSection
         eyebrow="Charlotte's Trusted Precious Metals & Luxury Watch Buyer"
         headline="Queen City Precious Metals"

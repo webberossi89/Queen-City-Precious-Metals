@@ -1,16 +1,14 @@
 import { MainLayout } from "@/components/layout/MainLayout";
+import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { EventCard } from "@/components/sections/EventCard";
 import { events } from "@/data/events";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 
 export default function EventsPage() {
-  useEffect(() => {
-    document.title = "Upcoming Events | Queen City Precious Metals";
-  }, []);
 
   const [filter, setFilter] = useState("All");
   const cities = ["All", ...new Set(events.map(e => e.city))];
@@ -19,6 +17,11 @@ export default function EventsPage() {
 
   return (
     <MainLayout>
+      <SEO
+        title="Upcoming Events"
+        description="Find upcoming Queen City Precious Metals buying events near Charlotte, NC. Bring your gold, coins, bullion, jewelry, or luxury watches for a free, no-obligation valuation."
+        canonical="/events"
+      />
       <HeroSection
         headline="Upcoming Buying Events"
         subheadline="Find an upcoming Queen City Precious Metals event near you and bring your items for an in-person evaluation."

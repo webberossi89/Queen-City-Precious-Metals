@@ -1,18 +1,19 @@
 import { MainLayout } from "@/components/layout/MainLayout";
+import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { CtaSection } from "@/components/sections/CtaSection";
-import { useEffect } from "react";
 import { ShieldCheck, MapPin, Gem, UserCheck, Clock } from "lucide-react";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 
 export default function AboutPage() {
-  useEffect(() => {
-    document.title = "About Us | Queen City Precious Metals";
-  }, []);
-
   return (
     <MainLayout>
+      <SEO
+        title="About Us"
+        description="Queen City Precious Metals is a professional precious metals and luxury watch buyer serving Charlotte, NC. Transparent valuations, no-pressure consultations, and expert knowledge."
+        canonical="/about"
+      />
       <HeroSection
         headline="A Straightforward, Professional Way to Sell High-Value Items"
         subheadline="Queen City Precious Metals is built on transparency, expertise, and a commitment to providing the best selling experience in the Carolinas."

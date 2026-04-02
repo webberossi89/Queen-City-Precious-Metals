@@ -1,14 +1,13 @@
 import { MainLayout } from "@/components/layout/MainLayout";
+import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { businessInfo } from "@/data/navigation";
-import { useEffect } from "react";
 import { Phone, Mail, Calendar } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
-import { useLocation } from "wouter";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 
 const contactSchema = z.object({
@@ -23,11 +22,6 @@ type ContactForm = z.infer<typeof contactSchema>;
 
 export default function ContactPage() {
   const { toast } = useToast();
-  const [location] = useLocation();
-
-  useEffect(() => {
-    document.title = "Contact Us | Queen City Precious Metals";
-  }, []);
 
   const {
     register,
@@ -71,6 +65,11 @@ export default function ContactPage() {
 
   return (
     <MainLayout>
+      <SEO
+        title="Contact Us"
+        description="Contact Queen City Precious Metals to ask about selling gold, coins, bullion, jewelry, or luxury watches. Call (866) 721-7869 or send us a message."
+        canonical="/contact"
+      />
       <HeroSection
         headline="Questions About an Item or Upcoming Event?"
         subheadline="Reach out to Queen City Precious Metals to ask about what we buy, upcoming event details, or whether your item qualifies."

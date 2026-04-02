@@ -110,8 +110,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {businessInfo.name}. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <Link href="#" className="text-white/40 hover:text-white text-xs">Privacy Policy</Link>
-            <Link href="#" className="text-white/40 hover:text-white text-xs">Terms of Service</Link>
+            <a href="tel:8667217869" className="text-white/40 hover:text-gold text-xs transition-colors">(866) 721-7869</a>
           </div>
         </div>
       </div>

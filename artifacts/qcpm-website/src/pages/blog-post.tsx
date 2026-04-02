@@ -1,20 +1,14 @@
 import { MainLayout } from "@/components/layout/MainLayout";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
+import { SEO } from "@/components/SEO";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 import { blogPosts } from "@/data/blog";
 import { Link, useParams } from "wouter";
-import { useEffect } from "react";
 import { Calendar, ArrowLeft } from "lucide-react";
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find((p) => p.slug === slug);
-
-  useEffect(() => {
-    document.title = post
-      ? `${post.title} | Queen City Precious Metals`
-      : "Post Not Found | Queen City Precious Metals";
-  }, [post]);
 
   if (!post) {
     return (
@@ -41,6 +35,13 @@ export default function BlogPostPage() {
 
   return (
     <MainLayout>
+      {post && (
+        <SEO
+          title={post.title}
+          description={post.excerpt}
+          canonical={`/blog/${post.slug}`}
+        />
+      )}
       <SectionWrapper navy className="py-12 md:py-20">
         <article className="max-w-3xl mx-auto">
           <Link

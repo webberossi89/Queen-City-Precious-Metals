@@ -1,19 +1,20 @@
 import { MainLayout } from "@/components/layout/MainLayout";
+import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { faqGroups } from "@/data/faqs";
-import { useEffect } from "react";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 
 export default function FaqPage() {
-  useEffect(() => {
-    document.title = "FAQ | Queen City Precious Metals";
-  }, []);
-
   return (
     <MainLayout>
+      <SEO
+        title="FAQ"
+        description="Common questions about selling gold, coins, bullion, jewelry, and luxury watches to Queen City Precious Metals. Learn about our process, events, and what we buy."
+        canonical="/faq"
+      />
       <HeroSection
         headline="Frequently Asked Questions"
         subheadline="Find answers to common questions about our buying process, events, and what we buy."
