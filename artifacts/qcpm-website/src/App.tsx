@@ -11,6 +11,8 @@ const EventsPage = lazy(() => import("@/pages/events"));
 const AboutPage = lazy(() => import("@/pages/about"));
 const FaqPage = lazy(() => import("@/pages/faq"));
 const ContactPage = lazy(() => import("@/pages/contact"));
+const BlogPage = lazy(() => import("@/pages/blog"));
+const BlogPostPage = lazy(() => import("@/pages/blog-post"));
 
 const queryClient = new QueryClient();
 
@@ -32,6 +34,8 @@ function Router() {
         <Route path="/about" component={AboutPage} />
         <Route path="/faq" component={FaqPage} />
         <Route path="/contact" component={ContactPage} />
+        <Route path="/blog" component={BlogPage} />
+        <Route path="/blog/:slug" component={BlogPostPage} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>

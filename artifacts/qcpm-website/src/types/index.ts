@@ -44,3 +44,15 @@ export interface Brand {
   name: string;
   category: string;
 }
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  author: string;
+  category: string;
+  image?: string;
+  featured?: boolean;
+}
