@@ -116,26 +116,12 @@ export const categories: Category[] = [
     icon: "sparkles",
     highlighted: false,
   },
-  {
-    id: "smart-watches",
-    name: "Select Smart Watches",
-    description:
-      "Select Apple Watches and other higher-value wearable tech.",
-    items: [
-      "Apple Watch Ultra",
-      "Apple Watch Series (select models)",
-      "Other higher-value wearables",
-    ],
-    icon: "smartphone",
-    highlighted: false,
-  },
 ];
 
 export const featuredBrands = [
   { name: "Rolex", category: "Luxury Watch" },
   { name: "Cartier", category: "Luxury Watch" },
   { name: "Breitling", category: "Luxury Watch" },
-  { name: "Apple Watch", category: "Smart Watch" },
   { name: "Gold Chains", category: "Gold Jewelry" },
   { name: "Bullion & Bars", category: "Precious Metals" },
   { name: "Coins", category: "Coins & Collections" },

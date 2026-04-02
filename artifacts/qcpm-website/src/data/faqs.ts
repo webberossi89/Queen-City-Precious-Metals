@@ -9,7 +9,7 @@ export const faqGroups: FaqGroup[] = [
         id: "what-items",
         question: "What items do you buy?",
         answer:
-          "We buy gold jewelry, silver, coins, bullion, bars, estate jewelry, Rolex, Cartier, Breitling, and other premium watches, along with select Apple Watches and similar items.",
+          "We buy gold jewelry, silver, coins, bullion, bars, estate jewelry, and luxury watches including Rolex, Cartier, Breitling, and other premium brands.",
         group: "what-we-buy",
       },
       {
