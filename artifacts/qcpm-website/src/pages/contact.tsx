@@ -48,6 +48,11 @@ export default function ContactPage() {
     const result = await response.json();
 
     if (result.success) {
+      window.dataLayer?.push({
+        event: "form_submission",
+        form_name: "contact",
+        item_type: data.itemType,
+      });
       toast({
         title: "Message Sent",
         description:
