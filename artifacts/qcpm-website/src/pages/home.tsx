@@ -10,7 +10,7 @@ import { GoldDivider } from "@/components/ui/GoldDivider";
 import { categories, featuredBrands } from "@/data/categories";
 import { events } from "@/data/events";
 import { faqGroups } from "@/data/faqs";
-import { Shield, Clock, MapPin, BadgeCheck, CheckCircle2, ArrowRight } from "lucide-react";
+import { Shield, Clock, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 
@@ -74,7 +74,7 @@ export default function HomePage() {
             </h2>
             <GoldDivider align="left" className="mb-6" />
             <p className="text-white/70 text-lg leading-relaxed mb-8">
-              Some of the most common items we buy include luxury watches, gold chains, bullion, collectible coins, and estate jewelry. If it has precious metal value or recognized luxury brand value, it may qualify.
+              Some of the most common items we buy include luxury watches, gold chains, bullion, coins, and estate jewelry. If it has precious metal value or recognized luxury brand value, it may qualify.
             </p>
             <Link 
               href="/contact"
@@ -84,10 +84,10 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <img src="/images/luxury-watches.png" alt="Luxury watches" className="rounded-lg shadow-xl w-full h-48 object-cover border border-white/10" />
-            <img src="/images/gold-jewelry.png" alt="Gold jewelry" className="rounded-lg shadow-xl w-full h-48 object-cover border border-white/10 mt-8" />
-            <img src="/images/bullion.png" alt="Gold bullion" className="rounded-lg shadow-xl w-full h-48 object-cover border border-white/10 -mt-8" />
-            <img src="/images/coins.png" alt="Rare coins" className="rounded-lg shadow-xl w-full h-48 object-cover border border-white/10" />
+            <img src="/images/luxury-watches.png" alt="Rolex, Cartier, and Breitling luxury watches" className="rounded-lg shadow-xl w-full h-48 object-cover border border-white/10" />
+            <img src="/images/gold-jewelry.png" alt="Gold chains, rings, and estate jewelry" className="rounded-lg shadow-xl w-full h-48 object-cover border border-white/10 mt-8" />
+            <img src="/images/bullion.png" alt="Gold and silver bars and bullion" className="rounded-lg shadow-xl w-full h-48 object-cover border border-white/10 -mt-8" />
+            <img src="/images/coins.png" alt="American Eagles, Morgan dollars, and silver coins" className="rounded-lg shadow-xl w-full h-48 object-cover border border-white/10" />
           </div>
         </div>
       </SectionWrapper>
@@ -149,26 +149,33 @@ export default function HomePage() {
       </SectionWrapper>
 
       <SectionWrapper dark>
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Upcoming Events</h2>
-            <GoldDivider align="left" className="mb-6" />
-            <p className="text-white/70">
-              Meet the Queen City Precious Metals team at one of our upcoming buying events. Bring your items in person for a professional evaluation.
-            </p>
-          </div>
-          <Link href="/events" className="text-gold hover:text-gold-light font-bold shrink-0 flex items-center gap-2">
-            View All Events <ArrowRight size={16} />
-          </Link>
-        </div>
-
-        <div className="space-y-6">
-          <EventCard event={events[0]} featured />
-          <div className="grid md:grid-cols-2 gap-6 mt-6">
-            {events.slice(1, 3).map(event => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
+        <div className="text-center max-w-2xl mx-auto flex flex-col items-center">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Upcoming Events</h2>
+          <GoldDivider className="mb-6" />
+          {events.length > 0 ? (
+            <>
+              <p className="text-white/70 mb-12">
+                Meet the Queen City Precious Metals team at one of our upcoming buying events. Bring your items in person for a professional evaluation.
+              </p>
+              <div className="space-y-6 w-full max-w-5xl">
+                {events.slice(0, 3).map((event) => (
+                  <EventCard key={event.id} event={event} featured={event.featured} />
+                ))}
+              </div>
+              <Link href="/events" className="mt-8 text-gold hover:text-gold-light font-bold flex items-center gap-2">
+                View All Events <ArrowRight size={16} />
+              </Link>
+            </>
+          ) : (
+            <>
+              <p className="text-white/70 text-lg mb-4">
+                We're scheduling our next round of buying events across the Charlotte region.
+              </p>
+              <p className="text-white/50">
+                Check back soon for dates and locations, or <Link href="/contact" className="text-gold hover:text-gold-light underline underline-offset-2">contact us</Link> to be notified.
+              </p>
+            </>
+          )}
         </div>
       </SectionWrapper>
 

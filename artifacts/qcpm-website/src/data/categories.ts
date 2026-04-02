@@ -90,7 +90,7 @@ export const categories: Category[] = [
   {
     id: "pocket-watches",
     name: "Pocket Watches",
-    description: "Antique, vintage, and gold pocket watches with collector or precious metal value.",
+    description: "Antique, vintage, and gold pocket watches valued for their precious metal content.",
     items: [
       "Gold pocket watches",
       "Silver pocket watches",

@@ -5,16 +5,10 @@ import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { EventCard } from "@/components/sections/EventCard";
 import { events } from "@/data/events";
-import { useState } from "react";
 import { GoldDivider } from "@/components/ui/GoldDivider";
+import { Calendar } from "lucide-react";
 
 export default function EventsPage() {
-
-  const [filter, setFilter] = useState("All");
-  const cities = ["All", ...new Set(events.map(e => e.city))];
-
-  const filteredEvents = filter === "All" ? events : events.filter(e => e.city === filter);
-
   return (
     <MainLayout>
       <SEO
@@ -29,48 +23,24 @@ export default function EventsPage() {
       />
 
       <SectionWrapper navy className="py-12 md:py-20">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-6 border-b border-white/5 pb-8">
-          <div className="flex flex-col items-start">
-            <h2 className="font-serif text-3xl font-bold text-white mb-3">Event Schedule</h2>
-            <GoldDivider align="left" animated={false} />
-          </div>
-          <div className="flex flex-col sm:flex-row items-center gap-3">
-            <span className="text-white/60 text-sm font-medium">Filter by City:</span>
-            <div className="flex flex-wrap justify-center gap-2">
-              {cities.map(city => (
-                <button
-                  key={city}
-                  onClick={() => setFilter(city)}
-                  className={`px-4 py-2 rounded text-sm font-bold transition-colors ${
-                    filter === city
-                      ? "bg-gold text-navy-dark"
-                      : "bg-navy-dark border border-white/10 text-white hover:border-gold/50"
-                  }`}
-                >
-                  {city}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="space-y-6 max-w-5xl mx-auto">
-          {filteredEvents.length > 0 ? (
-            filteredEvents.map(event => (
+        {events.length > 0 ? (
+          <div className="space-y-6 max-w-5xl mx-auto">
+            {events.map((event) => (
               <EventCard key={event.id} event={event} featured={event.featured} />
-            ))
-          ) : (
-            <div className="text-center py-20 bg-navy-dark rounded-lg border border-white/5">
-              <p className="text-white/60 text-lg">No events scheduled for this location currently.</p>
-              <button 
-                onClick={() => setFilter("All")}
-                className="mt-4 text-gold hover:text-gold-light underline underline-offset-4"
-              >
-                View all events
-              </button>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-16 max-w-lg mx-auto">
+            <div className="w-20 h-20 mx-auto bg-navy-dark border border-gold/30 rounded-full flex items-center justify-center mb-6">
+              <Calendar size={36} className="text-gold" />
             </div>
-          )}
-        </div>
+            <h2 className="font-serif text-3xl text-white mb-4">Events Coming Soon</h2>
+            <GoldDivider className="mb-6 mx-auto" />
+            <p className="text-white/70 text-lg">
+              Check back soon for upcoming show dates and appearances across the Charlotte region.
+            </p>
+          </div>
+        )}
       </SectionWrapper>
 
       <CtaSection

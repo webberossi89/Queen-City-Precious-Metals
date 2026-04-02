@@ -13,7 +13,7 @@ export default function BlogPage() {
     <MainLayout>
       <SEO
         title="Blog"
-        description="Precious metals market updates, selling guides, and news from Queen City Precious Metals. Stay informed about gold prices, coin collecting, and luxury watch trends."
+        description="Precious metals market updates, selling guides, and news from Queen City Precious Metals. Stay informed about gold prices, coins, and luxury watch trends."
         canonical="/blog"
       />
       <HeroSection

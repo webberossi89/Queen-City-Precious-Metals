@@ -65,7 +65,7 @@ export default function AboutPage() {
           {[
             {
               title: "Luxury Watches",
-              desc: "Specialized knowledge in Rolex, Cartier, Breitling, Omega, and other premium timepieces, acknowledging brand and collector value.",
+              desc: "Specialized knowledge in Rolex, Cartier, Breitling, Omega, and other premium timepieces with recognized brand value.",
               icon: Clock
             },
             {
