@@ -30,13 +30,13 @@ export default function HomePage() {
         secondaryCta={{ label: "See What We Buy", href: "/what-we-buy" }}
         badges={["Free Evaluations", "Immediate Payment", "No Pressure", "Expert Appraisers"]}
         rightSlot={
-          <div className="grid grid-cols-2 gap-2 h-[480px] lg:h-[560px]">
+          <div className="grid grid-cols-2 grid-rows-[45%_27.5%_27.5%] gap-2 h-[480px] lg:h-[560px]">
             {/* Gold bars — spans both columns */}
-            <div className="col-span-2 relative rounded-lg overflow-hidden border border-gold/20 shadow-xl group">
+            <div className="col-span-2 relative rounded-lg overflow-hidden border border-gold/20 shadow-xl group bg-[#0D1B3E]">
               <img
                 src="/images/hero-gold-bars.png"
                 alt="Gold bullion bars"
-                className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-1000 ease-out"
+                className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-1000 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/60 via-transparent to-transparent" />
               <span className="absolute bottom-2 left-3 text-xs text-gold/80 font-semibold tracking-widest uppercase">Gold Bullion</span>
