@@ -108,6 +108,36 @@ uri = "file://attached_assets/logos/logo_final_v3.png"
 type = "image"
 title = "QC interlocked monogram crown"
 
+[[generated]]
+id = "D8khMArQidVRQCWHNzOiN"
+uri = "file://artifacts/qcpm-website/public/images/hero-gold-bars.png"
+type = "image"
+title = "hero gold bars"
+
+[[generated]]
+id = "HXdo-NO8iSxdTMFVcY0ih"
+uri = "file://artifacts/qcpm-website/public/images/hero-american-eagles.png"
+type = "image"
+title = "american gold eagles"
+
+[[generated]]
+id = "kSGhv-jdsX9A7N-gZD3cH"
+uri = "file://artifacts/qcpm-website/public/images/hero-morgan-dollars.png"
+type = "image"
+title = "morgan silver dollars"
+
+[[generated]]
+id = "3WLw5CSfpgcmeMDhUVds7"
+uri = "file://artifacts/qcpm-website/public/images/hero-peace-dollars.png"
+type = "image"
+title = "peace silver dollars"
+
+[[generated]]
+id = "hhjNNG5xtSVUZpgnnkwkY"
+uri = "file://artifacts/qcpm-website/public/images/hero-junk-silver.png"
+type = "image"
+title = "junk silver coins"
+
 [[outputs]]
 id = "1_twsAmWaJjr-1AWCCEBV"
 uri = "file://attached_assets/logos/logo_final_composed.png"

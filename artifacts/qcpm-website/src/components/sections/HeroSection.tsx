@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { GoldDivider } from "@/components/ui/GoldDivider";
+import { ReactNode } from "react";
 
 interface HeroSectionProps {
   eyebrow?: string;
@@ -12,6 +13,7 @@ interface HeroSectionProps {
   imageSrc?: string;
   imageAlt?: string;
   centered?: boolean;
+  rightSlot?: ReactNode;
 }
 
 export function HeroSection({
@@ -24,8 +26,10 @@ export function HeroSection({
   imageSrc,
   imageAlt = "Hero image",
   centered = false,
+  rightSlot,
 }: HeroSectionProps) {
-  const isInternal = centered && !imageSrc;
+  const hasRightPanel = !!(imageSrc || rightSlot);
+  const isInternal = centered && !hasRightPanel;
 
   const contentNode = (
     <div className={`flex flex-col ${centered ? "items-center text-center mx-auto max-w-4xl" : ""}`}>
@@ -117,21 +121,24 @@ export function HeroSection({
       <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-blue-500/5 blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        {imageSrc ? (
+        {hasRightPanel ? (
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {contentNode}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative rounded-lg overflow-hidden shadow-2xl border border-white/5 group"
             >
-              <div className="absolute inset-0 bg-gradient-to-tr from-navy-dark/40 to-transparent z-10" />
-              <img
-                src={imageSrc}
-                alt={imageAlt}
-                className="w-full h-[400px] lg:h-[560px] object-cover object-center transform group-hover:scale-105 transition-transform duration-1000 ease-out"
-              />
+              {rightSlot ?? (
+                <div className="relative rounded-lg overflow-hidden shadow-2xl border border-white/5 group">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-navy-dark/40 to-transparent z-10" />
+                  <img
+                    src={imageSrc}
+                    alt={imageAlt}
+                    className="w-full h-[400px] lg:h-[560px] object-cover object-center transform group-hover:scale-105 transition-transform duration-1000 ease-out"
+                  />
+                </div>
+              )}
             </motion.div>
           </div>
         ) : (
