@@ -7,7 +7,7 @@
 **Business:** Buys gold jewelry, silver, coins, bullion, luxury watches, estate jewelry, select Apple Watches  
 **Tagline:** Charlotte's Trusted Precious Metals & Luxury Watch Buyer  
 **Phone:** (704) 555-0100  
-**Email:** info@queencitypreciousmetals.com
+**Email:** queencitypreciousmetals@gmail.com
 
 **Does NOT buy:** antiques, playing cards
 

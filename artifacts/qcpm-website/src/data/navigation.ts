@@ -14,7 +14,7 @@ export const businessInfo = {
   name: "Queen City Precious Metals",
   tagline: "Charlotte's Trusted Precious Metals & Luxury Watch Buyer",
   phone: "(866) 721-7869",
-  email: "info@queencitypreciousmetals.com",
+  email: "queencitypreciousmetals@gmail.com",
   city: "Charlotte",
   state: "NC",
   description:

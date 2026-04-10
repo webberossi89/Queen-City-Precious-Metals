@@ -13,7 +13,7 @@ export default function WhatWeBuyPage() {
     <MainLayout>
       <SEO
         title="What We Buy"
-        description="We buy gold jewelry, silver, coins, bullion, bars, estate jewelry, pocket watches, and luxury watches including Rolex, Cartier, Breitling, Patek Philippe, and more."
+        description="We buy gold jewelry, silver, coins, bullion, bars, estate jewelry, collector watches (for precious metal value), and luxury watches including Rolex, Cartier, Breitling, Patek Philippe, and more."
         canonical="/what-we-buy"
       />
       <HeroSection
