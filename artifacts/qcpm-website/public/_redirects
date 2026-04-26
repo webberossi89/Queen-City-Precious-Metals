@@ -1,0 +1,8 @@
+# Cloudflare Pages redirects.
+# 1) Canonicalize www to bare domain (301).
+# 2) SPA fallback: serve /index.html for any unmatched path so the React
+#    Router can take over for client-side navigation. Cloudflare Pages
+#    serves real per-route static files (dist/<route>/index.html) for
+#    direct hits before falling back here.
+https://www.queencitypreciousmetals.com/* https://queencitypreciousmetals.com/:splat 301!
+/* /index.html 200

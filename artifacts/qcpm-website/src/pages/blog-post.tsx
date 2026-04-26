@@ -1,6 +1,7 @@
 import { MainLayout } from "@/components/layout/MainLayout";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { SEO } from "@/components/SEO";
+import { Schema, buildBreadcrumb, buildArticle } from "@/components/Schema";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 import { blogPosts } from "@/data/blog";
 import { Link, useParams } from "wouter";
@@ -36,11 +37,30 @@ export default function BlogPostPage() {
   return (
     <MainLayout>
       {post && (
-        <SEO
-          title={post.title}
-          description={post.excerpt}
-          canonical={`/blog/${post.slug}`}
-        />
+        <>
+          <SEO
+            title={post.title}
+            description={post.excerpt}
+            canonical={`/blog/${post.slug}`}
+          />
+          <Schema
+            data={[
+              buildBreadcrumb([
+                { name: "Home", path: "/" },
+                { name: "Blog", path: "/blog" },
+                { name: post.title, path: `/blog/${post.slug}` },
+              ]),
+              buildArticle({
+                title: post.title,
+                description: post.excerpt,
+                slug: post.slug,
+                datePublished: post.date,
+                author: post.author,
+                image: post.image,
+              }),
+            ]}
+          />
+        </>
       )}
       <SectionWrapper navy className="py-12 md:py-20">
         <article className="max-w-3xl mx-auto">

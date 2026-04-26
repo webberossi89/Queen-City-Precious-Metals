@@ -1,5 +1,6 @@
 import { MainLayout } from "@/components/layout/MainLayout";
 import { SEO } from "@/components/SEO";
+import { Schema, buildBreadcrumb } from "@/components/Schema";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { CtaSection } from "@/components/sections/CtaSection";
@@ -15,6 +16,12 @@ export default function EventsPage() {
         title="Upcoming Events"
         description="Find upcoming Queen City Precious Metals buying events near Charlotte, NC. Bring your gold, coins, bullion, jewelry, or luxury watches for a free, no-obligation valuation."
         canonical="/events"
+      />
+      <Schema
+        data={buildBreadcrumb([
+          { name: "Home", path: "/" },
+          { name: "Events", path: "/events" },
+        ])}
       />
       <HeroSection
         headline="Upcoming Buying Events"

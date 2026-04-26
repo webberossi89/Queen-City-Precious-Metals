@@ -25,6 +25,7 @@ export interface Category {
   items: string[];
   icon: string;
   highlighted?: boolean;
+  longDescription?: string[];
 }
 
 export interface FaqItem {

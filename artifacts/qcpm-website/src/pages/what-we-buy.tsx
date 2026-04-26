@@ -1,5 +1,6 @@
 import { MainLayout } from "@/components/layout/MainLayout";
 import { SEO } from "@/components/SEO";
+import { Schema, buildBreadcrumb, buildService } from "@/components/Schema";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { CtaSection } from "@/components/sections/CtaSection";
@@ -15,6 +16,21 @@ export default function WhatWeBuyPage() {
         title="What We Buy"
         description="We buy gold jewelry, silver, coins, bullion, bars, estate jewelry, collector watches (for precious metal value), and luxury watches including Rolex, Cartier, Breitling, Patek Philippe, and more."
         canonical="/what-we-buy"
+      />
+      <Schema
+        data={[
+          buildBreadcrumb([
+            { name: "Home", path: "/" },
+            { name: "What We Buy", path: "/what-we-buy" },
+          ]),
+          ...categories.map((c) =>
+            buildService({
+              name: `${c.name} Buying`,
+              description: c.description,
+              serviceType: c.name,
+            }),
+          ),
+        ]}
       />
       <HeroSection
         headline="What We Buy"
@@ -54,10 +70,18 @@ export default function WhatWeBuyPage() {
                 
                 <div className="w-full md:w-1/2">
                   <h2 className="font-serif text-3xl font-bold text-white mb-4">{category.name}</h2>
-                  <p className="text-white/70 text-lg mb-8 leading-relaxed">
+                  <p className="text-white/70 text-lg mb-6 leading-relaxed">
                     {category.description}
                   </p>
-                  
+
+                  {category.longDescription && (
+                    <div className="space-y-4 mb-8 text-white/60 leading-relaxed">
+                      {category.longDescription.map((para, i) => (
+                        <p key={i}>{para}</p>
+                      ))}
+                    </div>
+                  )}
+
                   <div className="bg-navy-light rounded-lg p-6 border border-white/5 mb-8">
                     <h4 className="text-white font-bold mb-4 flex items-center gap-2">
                       <Icons.CheckCircle2 className="text-gold w-5 h-5" />

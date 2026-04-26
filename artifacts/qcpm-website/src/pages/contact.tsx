@@ -1,5 +1,6 @@
 import { MainLayout } from "@/components/layout/MainLayout";
 import { SEO } from "@/components/SEO";
+import { Schema, buildBreadcrumb } from "@/components/Schema";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { businessInfo } from "@/data/navigation";
@@ -74,6 +75,12 @@ export default function ContactPage() {
         title="Contact Us"
         description="Contact Queen City Precious Metals to ask about selling gold, coins, bullion, jewelry, or luxury watches. Call (866) 721-7869 or send us a message."
         canonical="/contact"
+      />
+      <Schema
+        data={buildBreadcrumb([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ])}
       />
       <HeroSection
         headline="Questions About an Item or Upcoming Event?"

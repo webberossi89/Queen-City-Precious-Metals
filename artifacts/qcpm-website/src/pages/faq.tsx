@@ -1,10 +1,11 @@
 import { MainLayout } from "@/components/layout/MainLayout";
 import { SEO } from "@/components/SEO";
+import { Schema, buildBreadcrumb, buildFaqPage } from "@/components/Schema";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
-import { faqGroups } from "@/data/faqs";
+import { faqGroups, allFaqs } from "@/data/faqs";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 
 export default function FaqPage() {
@@ -14,6 +15,15 @@ export default function FaqPage() {
         title="FAQ"
         description="Common questions about selling gold, coins, bullion, jewelry, and luxury watches to Queen City Precious Metals. Learn about our process, events, and what we buy."
         canonical="/faq"
+      />
+      <Schema
+        data={[
+          buildBreadcrumb([
+            { name: "Home", path: "/" },
+            { name: "FAQ", path: "/faq" },
+          ]),
+          buildFaqPage(allFaqs),
+        ]}
       />
       <HeroSection
         headline="Frequently Asked Questions"

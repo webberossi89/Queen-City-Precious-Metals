@@ -4,6 +4,7 @@ import { SectionWrapper } from "@/components/sections/SectionWrapper";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 import { blogPosts } from "@/data/blog";
 import { SEO } from "@/components/SEO";
+import { Schema, buildBreadcrumb } from "@/components/Schema";
 import { Link } from "wouter";
 import { Calendar, ArrowRight } from "lucide-react";
 
@@ -15,6 +16,12 @@ export default function BlogPage() {
         title="Blog"
         description="Precious metals market updates, selling guides, and news from Queen City Precious Metals. Stay informed about gold prices, coins, and luxury watch trends."
         canonical="/blog"
+      />
+      <Schema
+        data={buildBreadcrumb([
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+        ])}
       />
       <HeroSection
         headline="Insights & Updates"
