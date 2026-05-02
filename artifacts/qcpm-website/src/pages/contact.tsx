@@ -34,7 +34,7 @@ export default function ContactPage() {
   });
 
   const onSubmit = async (data: ContactForm) => {
-    const response = await fetch("https://api.web3forms.com/submit", {
+    const web3formsRequest = fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -44,11 +44,45 @@ export default function ContactPage() {
         ...data,
         botcheck: "",
       }),
-    });
+    }).then((res) => res.json());
 
-    const result = await response.json();
+    const sheetsUrl = import.meta.env.VITE_SHEETS_WEBHOOK_URL;
+    const sheetsSecret = import.meta.env.VITE_SHEETS_WEBHOOK_SECRET;
+    const sheetsRequest = sheetsUrl
+      ? fetch(sheetsUrl, {
+          method: "POST",
+          // URLSearchParams keeps the request a simple POST and avoids
+          // a CORS preflight against the Apps Script /exec endpoint.
+          body: new URLSearchParams({
+            secret: sheetsSecret ?? "",
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            itemType: data.itemType,
+            message: data.message,
+            source: "qcpm-contact",
+            userAgent: navigator.userAgent,
+            referrer: document.referrer,
+          }),
+        })
+      : Promise.resolve(null);
 
-    if (result.success) {
+    const [web3formsOutcome, sheetsOutcome] = await Promise.allSettled([
+      web3formsRequest,
+      sheetsRequest,
+    ]);
+
+    const emailSucceeded =
+      web3formsOutcome.status === "fulfilled" && web3formsOutcome.value?.success;
+
+    if (sheetsOutcome.status === "rejected") {
+      // Non-fatal: email still went out via Web3Forms.
+      // Surfaced here so a missing/broken webhook is visible during dev.
+      // eslint-disable-next-line no-console
+      console.warn("Sheets webhook failed", sheetsOutcome.reason);
+    }
+
+    if (emailSucceeded) {
       window.dataLayer?.push({
         event: "form_submission",
         form_name: "contact",
